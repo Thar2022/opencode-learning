@@ -19,6 +19,14 @@
 - `/undo` = ย้อนการแก้ไขล่าสุด
 - `/redo` = ทำซ้ำที่ undo ไป
 
+## บทที่ 4: Git & GitHub — 2026-05-09
+- `git checkout -b` = สร้าง branch ใหม่
+- `git commit` + `git push` = commit แล้วดันขึ้น remote
+- `gh pr create` = สร้าง pull request
+- flow: branch → commit → push → PR → merge
+- skill `git-commit` (`เอาขึ้น`) จัดการ commit+push ให้
+- force push ใช้เขียนทับ commit เก่า (ระวังบน main)
+
 ## ระบบการเรียนรู้ — 2026-05-09
 - **AGENTS.md** = "คู่มือครู AI" — AI อ่านอัตโนมัติทุก session
 - **PROGRESS.md** = "สมุดพก" — เก็บสถานะว่าบทไหนเสร็จ
