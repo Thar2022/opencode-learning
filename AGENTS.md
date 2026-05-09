@@ -12,8 +12,9 @@ This is an OpenCode learning project. The user (Thar2022) is learning OpenCode c
 ## How to track progress
 - When a chapter is completed:
   1. Summarize key learnings → append to `notes/opencode-note.md`
-  2. Update `PROGRESS.md` markdown table (change `ยังไม่เริ่ม` → `เสร็จ`, add date)
-  3. Commit with message: "บทที่ X เสร็จ: [ชื่อ]"
+  2. Run `note-verify` skill to check for premature/incorrect content
+  3. Update `PROGRESS.md` markdown table (change `ยังไม่เริ่ม` → `เสร็จ`, add date)
+  4. Commit with message: "Complete Chapter X: [name]"
 
 ## Teaching style
 - Teach one chapter at a time
