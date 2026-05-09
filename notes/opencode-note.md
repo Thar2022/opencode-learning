@@ -20,15 +20,34 @@
 - `/redo` = ทำซ้ำที่ undo ไป
 
 ## บทที่ 4: Git & GitHub — 2026-05-09
-- `git checkout -b` = สร้าง branch ใหม่
-- `git commit` + `git push` = commit แล้วดันขึ้น remote
-- `gh pr create` = สร้าง pull request
-- flow: branch → commit → push → PR → merge
-- skill `git-commit` (`เอาขึ้น`) จัดการ commit+push ให้
-- force push ใช้เขียนทับ commit เก่า (ระวังบน main)
-- GitHub Actions + OpenCode bot: comment `/opencode` ใน issue → GitHub Actions trigger → bot อ่าน issue + โค้ด → สร้าง branch → แก้ → เปิด PR
-- Events: `issue_comment`, `pull_request`, `issues`, `schedule`
-- คำสั่ง: `/opencode explain`, `/opencode fix`, `/oc review`, `/oc implement`
+
+### Git พื้นฐาน
+| คำสั่ง | ทำอะไร |
+|--------|--------|
+| `git checkout -b <branch>` | สร้าง branch ใหม่ |
+| `git commit -m "msg"` | commit การเปลี่ยนแปลง |
+| `git push origin <branch>` | push ขึ้น remote |
+| `git push -f origin <branch>` | force push (เขียนทับ commit เก่า - ระวัง!) |
+
+### Pull Request
+| คำสั่ง | ทำอะไร |
+|--------|--------|
+| `gh pr create --title "..." --body "..."` | สร้าง PR |
+| `gh pr merge <num>` | merge PR |
+| flow จริง: branch → commit → push → PR → merge | — |
+
+### OpenCode Bot (GitHub Actions)
+| Event | ใช้ตอน |
+|-------|--------|
+| `issue_comment` | comment `/opencode` ใน issue |
+| `pull_request` | PR เปิด → AI review |
+| `issues` | issue เปิด → AI วิเคราะห์ |
+| `schedule` | รันอัตโนมัติตามเวลา |
+
+Bot คำสั่ง: `/opencode explain`, `/opencode fix`, `/oc review`, `/oc implement`
+
+### Skills ที่เกี่ยว
+- `git-commit` (`เอาขึ้น`) จัด commit+push ให้อัตโนมัติ
 
 ## ระบบการเรียนรู้ — 2026-05-09
 - **AGENTS.md** = "คู่มือครู AI" — AI อ่านอัตโนมัติทุก session
