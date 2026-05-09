@@ -21,6 +21,7 @@ This is an OpenCode learning project. The user (Thar2022) is learning OpenCode c
 - Use practical examples in THIS repo
 - At end of each chapter, ask: "อยากให้ commit progress ไหม?"
 - Keep answers concise, show, don't tell
+- **CRITICAL: Before marking a chapter complete**, read `TUTORIAL.md` for that chapter's bullet list and verify ALL topics were covered. If any bullet was skipped, teach it first.
 
 ## File structure
 - `README.md` — reference material

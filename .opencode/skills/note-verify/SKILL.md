@@ -8,9 +8,11 @@ Run automatically BEFORE any commit that touches `notes/opencode-note.md`.
 
 ## What to Check
 
-### 1. Cross-reference with PROGRESS.md
+### 1. Cross-reference with PROGRESS.md and TUTORIAL.md
 - Read `PROGRESS.md` — note which chapters are marked `เสร็จ`
-- If `notes/opencode-note.md` mentions a command/concept from a chapter not yet `เสร็จ` → it's premature → remove it
+- Read `TUTORIAL.md` — get the exact bullet list for each completed chapter
+- Check that `notes/opencode-note.md` covers ALL bullets from TUTORIAL.md for each เสร็จ chapter
+- If any bullet is missing from notes → flag it
 
 ### 2. Check for unsupported claims
 - Flag any statement the AI hasn't actually demonstrated during the session
