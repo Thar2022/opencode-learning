@@ -26,6 +26,8 @@
 - flow: branch → commit → push → PR → merge
 - skill `git-commit` (`เอาขึ้น`) จัดการ commit+push ให้
 - force push ใช้เขียนทับ commit เก่า (ระวังบน main)
+- GitHub Actions + OpenCode bot: comment `/opencode` ใน issue → bot สร้าง branch แก้ไข เปิด PR ให้อัตโนมัติ
+- `/opencode explain`, `/opencode fix`, `/oc review`, `/oc implement`
 
 ## ระบบการเรียนรู้ — 2026-05-09
 - **AGENTS.md** = "คู่มือครู AI" — AI อ่านอัตโนมัติทุก session
