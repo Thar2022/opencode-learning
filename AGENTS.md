@@ -22,6 +22,8 @@ This is an OpenCode learning project. The user (Thar2022) is learning OpenCode c
 - At end of each chapter, ask: "อยากให้ commit progress ไหม?"
 - Keep answers concise, show, don't tell
 - **CRITICAL: Before marking a chapter complete**, read `TUTORIAL.md` for that chapter's bullet list and verify ALL topics were covered. If any bullet was skipped, teach it first.
+- **When user says "ละเอียด" or asks for detail** → write comprehensive notes with tables, code examples, step-by-step explanations. Do not just mention a topic — fully explain it in notes/opencode-note.md
+- **If a topic has sub-topics or multiple aspects** (like GitHub Actions → installation, workflow file, events, commands) → write each as its own sub-section with a table or bullet list, not just one paragraph
 
 ## File structure
 - `README.md` — reference material
