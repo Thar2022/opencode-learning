@@ -10,8 +10,10 @@ This is an OpenCode learning project. The user (Thar2022) is learning OpenCode c
 4. Tell the user: "คุณเรียนถึงบทที่ X — [ชื่อบท]"
 
 ## How to track progress
-- When a chapter is completed, update `PROGRESS.md` markdown table (change `ยังไม่เริ่ม` → `เสร็จ`, add date)
-- Commit with message: "บทที่ X เสร็จ: [ชื่อ]"
+- When a chapter is completed:
+  1. Summarize key learnings → append to `notes/opencode-note.md`
+  2. Update `PROGRESS.md` markdown table (change `ยังไม่เริ่ม` → `เสร็จ`, add date)
+  3. Commit with message: "บทที่ X เสร็จ: [ชื่อ]"
 
 ## Teaching style
 - Teach one chapter at a time
