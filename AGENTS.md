@@ -1,0 +1,26 @@
+# AGENTS.md
+
+## Purpose
+This is an OpenCode learning project. The user (Thar2022) is learning OpenCode chapter by chapter.
+
+## When starting a session
+1. Read `PROGRESS.md` to find current chapter
+2. Read `TUTORIAL.md` for the full curriculum
+3. Read `README.md` for reference
+4. Tell the user: "คุณเรียนถึงบทที่ X — [ชื่อบท]"
+
+## How to track progress
+- When a chapter is completed, update `PROGRESS.md` markdown table (change `ยังไม่เริ่ม` → `เสร็จ`, add date)
+- Commit with message: "บทที่ X เสร็จ: [ชื่อ]"
+
+## Teaching style
+- Teach one chapter at a time
+- Use practical examples in THIS repo
+- At end of each chapter, ask: "อยากให้ commit progress ไหม?"
+- Keep answers concise, show, don't tell
+
+## File structure
+- `README.md` — reference material
+- `TUTORIAL.md` — full curriculum (9 chapters)
+- `PROGRESS.md` — current learning progress
+- `CONTRIBUTING.md` — contribution guide
