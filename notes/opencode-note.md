@@ -37,14 +37,58 @@
 | flow จริง: branch → commit → push → PR → merge | — |
 
 ### OpenCode Bot (GitHub Actions)
-| Event | ใช้ตอน |
-|-------|--------|
-| `issue_comment` | comment `/opencode` ใน issue |
-| `pull_request` | PR เปิด → AI review |
-| `issues` | issue เปิด → AI วิเคราะห์ |
-| `schedule` | รันอัตโนมัติตามเวลา |
 
-Bot คำสั่ง: `/opencode explain`, `/opencode fix`, `/oc review`, `/oc implement`
+Bot ที่ทำงานใน GitHub Actions — รัน AI ให้จัดการ issue/PR อัตโนมัติ
+
+**วิธีติดตั้ง:**
+1. ไปที่ github.com/apps/opencode-agent → ติดตั้ง app บน repo
+2. สร้าง `.github/workflows/opencode.yml` (อยู่ใน repo ที่ยังไม่ commit ด้วย token scope)
+3. เพิ่ม secret `ANTHROPIC_API_KEY` ใน repo Settings → Secrets
+
+**Workflow file:**
+```yaml
+name: opencode
+on:
+  issue_comment:   # trigger เมื่อมี comment ใน issue หรือ PR
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: anomalyco/opencode-action@v1
+        with:
+          model: anthropic/claude-sonnet-4-20250514
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+```
+
+**Events ที่ trigger ได้:**
+
+| Event | Trigger เมื่อไหร่ | Bot ทำอะไร |
+|-------|------------------|-----------|
+| `issue_comment` | comment มี `/opencode` หรือ `/oc` | อ่าน issue → วิเคราะห์/แก้ไข → เปิด PR |
+| `pull_request_review_comment` | comment บน code ใน PR | อ่าน diff context → ตอบแบบ targeted |
+| `issues` | issue เปิดใหม่หรือแก้ไข | อ่านเนื้อหา → วิเคราะห์ให้ |
+| `pull_request` | PR เปิด/อัปเดต | AI review PR |
+| `schedule` | ตาม cron schedule | รันอัตโนมัติ (ต้องใส่ `prompt`) |
+| `workflow_dispatch` | กดรันเองจาก Actions tab | รัน on-demand |
+
+**คำสั่งที่ใช้ใน comment:**
+
+| คำสั่ง | ต้องใช้กับ | ผลลัพธ์ |
+|--------|-----------|---------|
+| `/opencode explain this issue` | issue | อ่าน issue + ทุก comment → สรุปให้ |
+| `/opencode fix this` | issue | สร้าง branch → แก้ bug → เปิด PR |
+| `/oc review` | PR | review โค้ดใน PR |
+| `/oc implement` | PR comment | แก้ตามที่ขอใน code line comment |
+
+**ข้อดี:**
+- ไม่ต้องเปิด OpenCode เอง — bot ทำให้
+- ทำงานใน GitHub runner (ปลอดภัย, private)
+- คนในทีมใช้ได้แค่ comment
+- commit/PR จะแสดงว่ามาจาก bot
+
+**หมายเหตุ:** Token ต้องมี `workflow` scope ถึงจะ push workflow file ได้
 
 ### Skills ที่เกี่ยว
 - `git-commit` (`เอาขึ้น`) จัด commit+push ให้อัตโนมัติ
