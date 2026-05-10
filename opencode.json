@@ -1,6 +1,42 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "opencode-go/deepseek-v4-pro",
+  "agent": {
+    "plan": {
+      "model": "openzen/minimax-2.5-free",
+      "tools": {
+        "bash": false,
+        "write": false
+      }
+    },
+    "reviewer": {
+      "mode": "subagent",
+      "model": "openzen/minimax-2.5-free",
+      "description": "Reviews code changes",
+      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
+      "tools": {
+        "write": false,
+        "edit": false
+      }
+    },
+    "debugger": {
+      "mode": "subagent",
+      "model": "opencode-go/deepseek-v4-pro",
+      "description": "Debugs code and investigates issues",
+      "prompt": "You are a debugger. Find root causes of bugs. Use bash and read tools.",
+      "tools": {
+        "write": false,
+        "edit": false
+      }
+    }
+  },
   "permission": {
     "skill": "allow"
+  },
+  "lsp": {
+    
+  },
+  "mcpServers": {
+
   }
 }
