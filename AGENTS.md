@@ -15,6 +15,10 @@ This is an OpenCode learning project. The user (Thar2022) is learning OpenCode c
   2. Run `note-verify` skill to check for premature/incorrect content
   3. Update `PROGRESS.md` markdown table (change `ยังไม่เริ่ม` → `เสร็จ`, add date)
   4. Commit with message: "Complete Chapter X: [name]"
+- **Never commit automatically after every file change.** Only commit when:
+  - User explicitly says "เอาขึ้น", "commit", or "ขึ้น"
+  - Or when a chapter is fully completed (notes + verified + PROGRESS updated)
+  - If uncertain, ask: "ให้ commit ไหม?"
 
 ## Teaching style
 - Teach one chapter at a time
