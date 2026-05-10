@@ -183,6 +183,14 @@ jobs:
 
 📝 [อ่านละเอียด: LSP](./personel/lsp.md)
 
+## บทที่ 7: Sub-agents — 2026-05-09
+- **Sub-agent** = "ลูกน้อง" ที่ primary agent เรียกไปทำงานเฉพาะทาง
+- เรียกด้วย `@ชื่อ` เช่น `@general`, `@explore`, `@reviewer`, `@debugger`
+- `@general` — ทำงานซับซ้อนหลายขั้นตอน
+- `@explore` — ค้นหาอย่างเดียว เร็ว อ่านไฟล์ได้
+- `@reviewer` — review โค้ด เน้น security
+- `@debugger` — หา bug สืบสวน
+
 ## ระบบการเรียนรู้ — 2026-05-09
 - **AGENTS.md** = "คู่มือครู AI" — AI อ่านอัตโนมัติทุก session
 - **PROGRESS.md** = "สมุดพก" — เก็บสถานะว่าบทไหนเสร็จ
