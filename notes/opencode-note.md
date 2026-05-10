@@ -197,7 +197,11 @@ jobs:
 - ใช้ผ่าน `skill` tool — AI เห็นชื่อ skill แล้วเลือกโหลด
 - Skills ที่มี: note-taker, git-commit, note-verify, note-link, self-improve
 
-## ระบบการเรียนรู้ — 2026-05-09
+## บทที่ 9: ขั้นสูง — 2026-05-10
+- **Multi-session** — เปิดหลาย OpenCode พร้อมกัน คนละโปรเจค
+- **Client/Server** — Server = engine/AI, Client = terminal/desktop — แยกกันได้
+- **Local models** — ใช้ Ollama + model ฟรีในเครื่อง → ไม่ต้องเชื่อมต่อ internet
+- **Privacy** — OpenCode ไม่เก็บโค้ด, Token/Key เก็บในเครื่อง, Skills รันในเครื่อง
 - **AGENTS.md** = "คู่มือครู AI" — AI อ่านอัตโนมัติทุก session
 - **PROGRESS.md** = "สมุดพก" — เก็บสถานะว่าบทไหนเสร็จ
 - **TUTORIAL.md** = "สารบัญ" — 9 บทเรียน
