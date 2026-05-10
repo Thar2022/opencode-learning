@@ -191,6 +191,12 @@ jobs:
 - `@reviewer` — review โค้ด เน้น security
 - `@debugger` — หา bug สืบสวน
 
+## บทที่ 8: Skills — 2026-05-10
+- Skill = "คู่มือการทำงานเฉพาะทาง" ที่ AI โหลดมาใช้เมื่อจำเป็น
+- โครงสร้าง: `.opencode/skills/<ชื่อ>/SKILL.md` + YAML frontmatter (name, description)
+- ใช้ผ่าน `skill` tool — AI เห็นชื่อ skill แล้วเลือกโหลด
+- Skills ที่มี: note-taker, git-commit, note-verify, note-link, self-improve
+
 ## ระบบการเรียนรู้ — 2026-05-09
 - **AGENTS.md** = "คู่มือครู AI" — AI อ่านอัตโนมัติทุก session
 - **PROGRESS.md** = "สมุดพก" — เก็บสถานะว่าบทไหนเสร็จ
