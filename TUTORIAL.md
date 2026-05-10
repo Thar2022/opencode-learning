@@ -24,10 +24,9 @@
 - GitHub Actions + OpenCode bot
 
 ## บทที่ 5: คำสั่งพิเศษ
-- `/share` แชร์ session
-- `/connect` เปลี่ยน provider
-- `/init` สร้าง AGENTS.md
-- `@plan` / `@general` invoke subagent
+- `/share` แชร์ session ให้คนอื่นดู
+- `/connect` เชื่อมต่อ/เปลี่ยน LLM provider
+- `/init` วิเคราะห์โปรเจคแล้วสร้าง AGENTS.md ให้
 
 ## บทที่ 6: Configuration
 - `opencode.json` config
